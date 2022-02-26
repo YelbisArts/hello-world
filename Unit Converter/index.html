@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <script src="assets/js/main.js"></script>
+    <title> Simple Unit Converter</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Simple Unit Converter</h1>
+        </nav>
+    </header>
+
+    <section class = "temp">
+        <div>
+            <h2>Temperature</h2>
+        </div>
+
+        <div>
+            <p>
+                <label>Fahrenheit Input</label>
+                <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+                oninput="temperatureConverterF(this.value)"
+                onchange="temperatureConverterF(this.value)">
+            </p>
+
+            <p>
+                <label>Celsius Input</label>
+                <input id="inputCelsius" type="number" placeholder="Celsius"
+                oninput="temperatureConverterC(this.value)"
+                onchange="temperatureConverterC(this.value)">
+            </p>
+
+            <p>
+                <label>Kelvin Input</label>
+                <input id="inputKelvin" type="number" placeholder="Kelvin"
+                oninput="temperatureConverterK(this.value)"
+                onchange="temperatureConverterK(this.value)">
+            </p>
+
+            <p>
+                <label>Rankine Input</label>
+                <input id="inputRankine" type="number" placeholder="Rankine"
+                oninput="temperatureConverterR(this.value)"
+                onchange="temperatureConverterR(this.value)">
+            </p>
+
+        </div>
+
+        <div>
+
+            <p>Farenheit Output: <span id="outputFarenheit" onchange="CheckInt(this.value)"></span></p>
+            <p>Celsius Output: <span id="outputCelsius"></span></p>
+            <p>Kelvin Output: <span id="outputKelvin"></span></p>
+            <p>Rankine Output: <span id="outputRankine"></span></p>
+
+        </div>
+
+    </section>
+
+    <section class = "measure">
+
+        <h2>Measurement</h2>
+
+        <div>
+
+            <section>
+
+                <h3>Imperial</h3>
+
+                <p>
+                    <label>Inches Input</label>
+                    <input id="inputInches" type="number" placeholder="Inches"
+                    oninput="inputConverterI(this.value)"
+                    onchange="inputConverterI(this.value)">
+                </p>
+                <p>
+                    <label>Feet Input</label>
+                    <input id="inputFeet" type="number" placeholder="Feet"
+                    oninput="inputConverterF(this.value)"
+                    onchange="inputConverterF(this.value)">
+                </p>
+                <p>
+                    <label>Yards Input</label>
+                    <input id="inputYards" type="number" placeholder="Yards"
+                    oninput="inputConverterY(this.value)"
+                    onchange="inputConverterY(this.value)">
+                </p>
+                <p>
+                    <label>Miles Input</label>
+                    <input id="inputMiles" type="number" placeholder="Miles"
+                    oninput="inputConverterMiles(this.value)"
+                    onchange="inputConverterMiles(this.value)">
+                </p>
+            </section>
+
+            <section>
+
+                <h3>Metric</h3>
+
+                <p>
+                    <label>Millimeters Input</label>
+                    <input id="inputMillimeters" type="number" placeholder="Millimeters"
+                    oninput="inputConverterM(this.value)"
+                    onchange="inputConverterM(this.value)">
+                </p>
+                <p>
+                    <label>Centimeters Input</label>
+                    <input id="inputCentimeters" type="number" placeholder="Centimeters"
+                    oninput="inputConverterC(this.value)"
+                    onchange="inputConverterC(this.value)">
+                </p>
+                <p>
+                    <label>Meters Input</label>
+                    <input id="inputMeters" type="number" placeholder="Meters"
+                    oninput="inputConverterMeters(this.value)"
+                    onchange="inputConverterMeters(this.value)">
+                </p>
+                <p>
+                    <label>Kilometers Input</label>
+                    <input id="inputKilometers" type="number" placeholder="Kilometers"
+                    oninput="inputConverterK(this.value)"
+                    onchange="inputConverterK(this.value)">
+                </p>
+
+            </section>
+            
+        </div>
+
+        <div>
+
+            <section>
+                <h3>Imperial</h3>
+                <p>Inches Output: <span id="outputInches"></span></p>
+                <p>Feet Output: <span id="outputFeet"></span></p>
+                <p>Yard Output: <span id="outputYard"></span></p>
+                <p>Miles Output: <span id="outputMiles"></span></p>
+            </section>
+
+            <section>
+                <h3>Metric</h3>
+                <p>Millimeters Output: <span id="outputMillimeters"></span></p>
+                <p>Centimeters Output: <span id="outputCentimeters"></span></p>
+                <p>Meters Output: <span id="outputMeters"></span></p>
+                <p>Kilometers Output: <span id="outputKilometers"></span></p>
+            </section>
+
+        </div>
+
+    </section>
+
+    <section class = "weight">
+
+        <h2>Weight</h2>
+
+        <div>
+            <p>
+                <label>Ounce Input</label>
+                <input id="inputoz" type="number" placeholder="Ounce"
+                oninput="weightConverteroz(this.value)"
+                onchange="weightConverteroz(this.value)">
+            </p>
+
+            <p>
+                <label>Pound Input</label>
+                <input id="inputlb" type="number" placeholder="Pound"
+                oninput="weightConverterlb(this.value)"
+                onchange="weightConverterlb(this.value)">
+            </p>
+
+            <p>
+                <label>Gram Input</label>
+                <input id="inputg" type="number" placeholder="Gram"
+                oninput="weightConverterg(this.value)"
+                onchange="weightConverterg(this.value)">
+            </p>
+
+            <p>
+                <label>Kilogram Input</label>
+                <input id="inputkg" type="number" placeholder="Kilogram"
+                oninput="weightConverterkg(this.value)"
+                onchange="weightConverterkg(this.value)">
+            </p>
+
+        </div>
+
+        <div>
+
+            <p>Ounce Output: <span id="outputOunce"></span></p>
+            <p>Pound Output: <span id="outputPound"></span></p>
+            <p>Gram Output: <span id="outputGram"></span></p>
+            <p>Kilogram Output: <span id="outputKilogram"></span></p>
+
+        </div>
+
+    </section>
+
+    <section class = "capacity">
+
+        <h2>Capacity</h2>
+
+        <div>
+            <p>
+                <label>Gallon Input</label>
+                <input id="inputGallon" type="number" placeholder="Gallon"
+                oninput="capConverterG(this.value)"
+                onchange="capConverterG(this.value)">
+            </p>
+
+            <p>
+                <label>Liter Input</label>
+                <input id="inputLiter" type="number" placeholder="Liter"
+                oninput="capConverterL(this.value)"
+                onchange="capConverterL(this.value)">
+            </p>
+
+        </div>
+
+        <div>
+
+            <p>Gallon Output: <span id="outputGallon"></span></p>
+            <p>Liter Output: <span id="outputLiter"></span></p>
+
+        </div>
+
+    </section>
+    
+</body>
+</html>
